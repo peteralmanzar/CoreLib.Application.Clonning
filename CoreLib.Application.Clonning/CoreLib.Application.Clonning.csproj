@@ -1,7 +1,20 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageProjectUrl>https://github.com/peteralmanzar/CoreLib.Application.Clonning</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/peteralmanzar/CoreLib.Application.Clonning</RepositoryUrl>
+    <RepositoryType>github</RepositoryType>
+    <PackageTags>clonning object copy</PackageTags>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
 
 </Project>
