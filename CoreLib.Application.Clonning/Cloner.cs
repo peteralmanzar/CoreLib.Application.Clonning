@@ -7,19 +7,17 @@ namespace CoreLib.Application.Clonning
 {
     public static class Cloner
     {
-        public static T Clone<T>(T source)
+        public static T Clone<T>(T @object)
         {
-            #region Guards
             if(!typeof(T).IsSerializable)
-                throw new ArgumentException($"{nameof(source)} must be serializable.", nameof(source));
-            if(object.ReferenceEquals(source, null))
-                return default(T);
-            #endregion
+                throw new ArgumentException($"{nameof(@object)} must be serializable.", nameof(@object));
+            if(object.ReferenceEquals(@object, null))
+                throw new ArgumentNullException(nameof(@object));
 
             IFormatter formatter = new BinaryFormatter();
             using(var stream = new MemoryStream())
             {
-                formatter.Serialize(stream, source);
+                formatter.Serialize(stream, @object);
                 stream.Seek(0, SeekOrigin.Begin);
                 return (T)formatter.Deserialize(stream);
             }
