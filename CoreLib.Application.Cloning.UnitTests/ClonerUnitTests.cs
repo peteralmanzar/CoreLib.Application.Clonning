@@ -1,16 +1,12 @@
-using CoreLib.Application.Clonning.UnitTests.Model;
+using CoreLib.Application.Cloning.UnitTests.Model;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 
-namespace CoreLib.Application.Clonning.UnitTests
+namespace CoreLib.Application.Cloning.UnitTests
 {
     [TestClass]
     public class ClonerUnitTests
     {
-        #region Fields
-        private Random _random = new Random();
-        #endregion
-
         #region Public Functions
         [TestMethod]
         public void Clone_CopiesAllObjectPropertyValues()

@@ -7,7 +7,11 @@
     <PackageProjectUrl>https://github.com/peteralmanzar/CoreLib.Application.Clonning</PackageProjectUrl>
     <RepositoryUrl>https://github.com/peteralmanzar/CoreLib.Application.Clonning</RepositoryUrl>
     <RepositoryType>github</RepositoryType>
-    <PackageTags>clonning object copy</PackageTags>
+    <PackageTags>cloning object copy</PackageTags>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>C:\Users\Peter\source\repos\CoreLib.Application.Cloning\CoreLib.Application.Cloning\CoreLib.Application.Cloning.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>

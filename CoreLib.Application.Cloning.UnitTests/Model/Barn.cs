@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace CoreLib.Application.Clonning.UnitTests.Model
+namespace CoreLib.Application.Cloning.UnitTests.Model
 {
     [Serializable]
     internal class Barn

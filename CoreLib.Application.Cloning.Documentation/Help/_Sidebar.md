@@ -1,0 +1,7 @@
+- [CoreLib.Application.Cloning Namespace](N_CoreLib_Application_Cloning)
+  - [Cloner Class](T_CoreLib_Application_Cloning_Cloner)
+    - [Cloner Methods](Methods_T_CoreLib_Application_Cloning_Cloner)
+      - [Cloner.Clone(*T*) Method](M_CoreLib_Application_Cloning_Cloner_Clone__1)
+- [Welcome to the CoreLib.Application.Cloning wiki](1e202a01-03de-4a04-a18e-4d1d91243402)
+- [Version History](935c7628-a328-484c-a89b-5d2c10d83356)
+  - [Version 1.0.0.0](4a6c338a-3cf0-4c3d-b936-2aac175c3f65)

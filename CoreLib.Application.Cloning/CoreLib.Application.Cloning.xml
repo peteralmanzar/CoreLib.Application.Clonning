@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CoreLib.Application.Cloning</name>
+    </assembly>
+    <members>
+        <member name="T:CoreLib.Application.Cloning.Cloner">
+            <summary>
+            Class that provides methods to copy objects.
+            </summary>
+        </member>
+        <member name="M:CoreLib.Application.Cloning.Cloner.Clone``1(``0)">
+            <summary>
+            Create a copy of an object.
+            </summary>
+            <typeparam name="T" />
+            <param name="object">The object to be copied.</param>
+            <returns>The copy of the object.</returns>
+            <example>
+          code below shows the example classes (animal and Barn) that are going to be cloned.
+          <code>
+            [Serializable]
+            public class Barn
+            {
+              #region Properties
+              public int ID { get; set; }
+              public string Name { get; set; }
+              public List&lt;Animal&gt;
+              Animals { get; set; }
+              #endregion
+
+              #region Constructors
+              public Barn()
+              {
+                Animals = new List&lt;Animal&gt;();
+              }
+              #endregion
+            }
+          </code>
+
+          <code>
+            [Serializable]
+            internal class Animal
+            {
+              #region Properties
+              public int ID { get; set; }
+              public string Name { get; set; }
+              #endregion
+
+              #region Events
+              [field: NonSerialized]
+              public event EventHandler MakeNoise;
+              #endregion
+            }
+          </code>
+        
+          below is an example of cloning a barn object.
+          <code>
+            //create new barn
+            var barn = new Barn();
+          
+            //add animals to the barn
+            result.Animals.Add(new Animal() { ID = 1, Name = "Cow" });
+            result.Animals.Add(new Animal() { ID = 2, Name = "Pig" });
+            result.Animals.Add(new Animal() { ID = 3, Name = "Chicken" });
+          
+            //clone the barn
+            var clone = Cloner.Clone(barn);
+          </code>
+        </example>
+        </member>
+    </members>
+</doc>

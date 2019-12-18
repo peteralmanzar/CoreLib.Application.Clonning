@@ -1,0 +1,60 @@
+﻿<Documentation>
+  <Classes>
+    <members name="Cloner">
+      <Cloner>
+        <example>
+          code below shows the example classes (animal and Barn) that are going to be cloned.
+          <code>
+            [Serializable]
+            public class Barn
+            {
+              #region Properties
+              public int ID { get; set; }
+              public string Name { get; set; }
+              public List&lt;Animal&gt;
+              Animals { get; set; }
+              #endregion
+
+              #region Constructors
+              public Barn()
+              {
+                Animals = new List&lt;Animal&gt;();
+              }
+              #endregion
+            }
+          </code>
+
+          <code>
+            [Serializable]
+            internal class Animal
+            {
+              #region Properties
+              public int ID { get; set; }
+              public string Name { get; set; }
+              #endregion
+
+              #region Events
+              [field: NonSerialized]
+              public event EventHandler MakeNoise;
+              #endregion
+            }
+          </code>
+        
+          below is an example of cloning a barn object.
+          <code>
+            //create new barn
+            var barn = new Barn();
+          
+            //add animals to the barn
+            result.Animals.Add(new Animal() { ID = 1, Name = "Cow" });
+            result.Animals.Add(new Animal() { ID = 2, Name = "Pig" });
+            result.Animals.Add(new Animal() { ID = 3, Name = "Chicken" });
+          
+            //clone the barn
+            var clone = Cloner.Clone(barn);
+          </code>
+        </example>
+      </Cloner>
+    </members>
+  </Classes>
+</Documentation>
