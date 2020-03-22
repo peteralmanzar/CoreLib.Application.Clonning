@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CoreLib.Application.Clonning\CoreLib.Application.Clonning.csproj" />
+    <ProjectReference Include="..\CoreLib.Application.Cloning\CoreLib.Application.Cloning.csproj" />
   </ItemGroup>
 
 </Project>
