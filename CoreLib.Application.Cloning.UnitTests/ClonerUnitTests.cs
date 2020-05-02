@@ -1,6 +1,5 @@
 using CoreLib.Application.Cloning.UnitTests.Model;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
 
 namespace CoreLib.Application.Cloning.UnitTests
 {
